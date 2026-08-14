@@ -23,6 +23,12 @@ test('divide 15 to 5 equal 3', () => {
   expect(calculator.divide(15, 5)).toBe(3);
 });
 
+test('divide - dividing by 0 should throw an error', () => {
+    expect(() => {
+        calculator.divide(10, 0);
+    }).toThrow("Cannot divide by zero");
+});
+
 test('multiply 15 to 3 equal 45', () => {
   expect(calculator.multiply(15, 3)).toBe(45);
 });
